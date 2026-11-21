@@ -18,7 +18,9 @@ h1,h2,h3{font-family:var(--serif);font-weight:600}
 .shell{width:min(1180px,89%);margin-inline:auto}
 header{border-bottom:1px solid var(--line)}
 nav,footer .shell{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:19px}
-.brand{font-family:var(--serif);font-size:1.2rem;font-weight:700;white-space:nowrap}
+.brand{display:inline-flex;align-items:center;gap:12px;font-family:var(--serif);font-size:1.2rem;font-weight:700;white-space:nowrap}
+.brand-logo{display:block;width:64px;height:auto;flex:none}
+footer .brand-logo{width:76px}
 .nav-links{display:flex;align-items:center;gap:clamp(12px,3vw,36px);font-size:.88rem}
 .nav-contact.button{margin:0;padding:8px 16px;gap:8px;font-size:.88rem}
 .hero{display:grid;grid-template-columns:1fr .97fr;align-items:center;gap:clamp(25px,7vw,100px);padding-block:clamp(40px,7vw,92px)}
@@ -57,6 +59,8 @@ footer .footer-inner{align-items:flex-start;gap:28px;padding-block:32px}
 @media(max-width:800px){.hero{gap:26px}h1{font-size:clamp(2.65rem,6.3vw,4.8rem)}}
 @media(max-width:650px){
   nav{display:grid;grid-template-columns:1fr auto;gap:10px 12px}
+  nav .brand{gap:7px;font-size:1rem}
+  nav .brand-logo{width:36px}
   .nav-links{grid-row:2;grid-column:1/-1;gap:22px}
   .nav-contact{grid-row:1;grid-column:2}
   .hero,.start-grid,.faq{grid-template-columns:1fr}
@@ -71,7 +75,7 @@ footer .footer-inner{align-items:flex-start;gap:28px;padding-block:32px}
 <body id="top">
 <header>
 <nav class="shell" aria-label="主导航">
-<a class="brand" href="#top">Vic聊心室</a>
+<a class="brand" href="#top"><img class="brand-logo" src="assets/vic-logo-transparent.png" alt="" width="1158" height="1280">Vic聊心室</a>
 <div class="nav-links"><a href="#services">了解服务</a><a href="#faq">常见问题</a></div><a class="button nav-contact" href="https://wa.me/60108651169">用 WhatsApp 咨询 <span aria-hidden="true">↗</span></a>
 </nav>
 </header>
@@ -113,7 +117,7 @@ footer .footer-inner{align-items:flex-start;gap:28px;padding-block:32px}
 </main>
 <footer>
   <div class="shell footer-inner">
-    <a class="brand" href="#top">Vic聊心室</a>
+    <a class="brand" href="#top"><img class="brand-logo" src="assets/vic-logo-transparent.png" alt="" width="1158" height="1280">Vic聊心室</a>
     <dl class="footer-info">
       <div><dt>联络</dt><dd><a href="https://wa.me/60108651169">WhatsApp +60 10-865 1169</a></dd></div>
       <div><dt>营业时间</dt><dd>请通过 WhatsApp 询问</dd></div>
